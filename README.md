@@ -1,5 +1,9 @@
 
+I used Playbook here to configure the servers according to a baseline, so they all are using the correct ssh config and central authentication. 
 
+Then I used roles for specific server groups. Firing off the Playbook allows Ansible to install and configure the web server. It will make sure my database server allows connections from the new server, and then adds the new server to my network monitoring solution so that I am informed if the server suffers a failure in the future.
+
+Thus, to run this:
 Create a variables file using *ec2_vars/sample.yml* as a template.
 
 E.g. 
