@@ -5,7 +5,7 @@ Then I used roles for specific server groups. Firing off the Playbook allows Ans
 
 I was looking to build EC2 hosts with more consistency. I realized that using Ansible, it is easy to provision EC2 hosts and put some logic on it to adjust EC2 parameters based on the type of host to be built.
 
-The easiest way to start is to create a playbook calling the ec2 module with the parameters we want to pass to AWS to create our host. This project is a ittle more scalable way to do this, where the parameters are variables and we can easily have multiple types of hosts sharing the same playbook and role.
+The easiest way to start is to create a playbook calling the ec2 module with the parameters we want to pass to AWS to create our host. This project is a little more scalable way to do this, where the parameters are variables and we can easily have multiple types of hosts sharing the same playbook and role.
 
 The solution is organized in 3 parts:
 
