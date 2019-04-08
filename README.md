@@ -1,8 +1,4 @@
-
-I used Playbook here to configure the servers according to a baseline, so they all are using the correct ssh config and central authentication. 
-
-Then I used roles for specific server groups. Firing off the Playbook allows Ansible to install and configure the web server. It will make sure my database server allows connections from the new server, and then adds the new server to my network monitoring solution so that I am informed if the server suffers a failure in the future.
-
+# Problem solved: Managing many related AWS cloud services from a centralized computer
 I was looking to build EC2 hosts with more consistency. I realized that using Ansible, it is easy to provision EC2 hosts and put some logic on it to adjust EC2 parameters based on the type of host to be built.
 
 The easiest way to start is to create a playbook calling the ec2 module with the parameters we want to pass to AWS to create our host. This project is a little more scalable way to do this, where the parameters are variables and we can easily have multiple types of hosts sharing the same playbook and role.
