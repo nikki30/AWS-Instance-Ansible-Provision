@@ -9,13 +9,18 @@ The solution is organized in 3 parts:
 * Yaml files with variables that will be used as parameters for each type of EC2 host
 * Playbook that combines the variables file with the role
 
-Thus, to run this:
-Create a variables file using *ec2_vars/sample.yml* as a template.
+#### What each file does:
+* provision-ec2.yml : flow
+Describe out hosts, connection and set permissions as root. MentionS the workflow and where each relevant document can be found. For example, tells Ansible to go to roles to go find the variables for templating. 
 
-E.g. 
+* main.yaml
 
-    cp ec2_vars/sample.yml ec2_vars/webservers.yml
-    vi ec2_vars/webservers.yml
+Template values come from the micro_s.yml file which is mentioned in command line when playbook is run.
+
+
+* webservers.yml
+
+Key value pairs that go into main.yaml. 
     
 After setting all variables, run it:
 
