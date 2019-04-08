@@ -10,17 +10,12 @@ The solution is organized in 3 parts:
 * Playbook that combines the variables file with the role
 
 #### What each file does:
-* provision-ec2.yml : flow
-Describe out hosts, connection and set permissions as root. MentionS the workflow and where each relevant document can be found. For example, tells Ansible to go to roles to go find the variables for templating. 
+* provision-ec2.yml : Describe out hosts, connection and set permissions as root. Mentions the workflow and where each relevant document can be found. For example, tells Ansible to go to roles to go find the variables for templating. 
 
-* main.yaml
-
-Template values come from the micro_s.yml file which is mentioned in command line when playbook is run.
+* main.yaml: Template values come from the micro_s.yml file which is mentioned in command line when playbook is run.
 
 
-* webservers.yml
-
-Key value pairs that go into main.yaml. 
+* sample.yml: Key value pairs that go into main.yaml. 
     
 After setting all variables, run it:
 
